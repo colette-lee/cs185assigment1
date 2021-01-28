@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>email</title>
+        <script>
+            function validate(){
+                var valid = true;
+                var x = document.forms["emailForm"]["email"].value;
+                var end = x.substr(x.length-4,4);
+                if(x.includes('@') && (end == ".edu" || end==".com") ){
+                    valid = true;
+                    //document.getElementById("res").innerHTML = "Email successfully recorded.";
+                    alert("Email successfully recorded.");
+                } else {
+                    //document.getElementById("res").innerHTML = "Invalid email";
+                    alert("Invalid email");
+
+                }
+               
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class = "topnav">
+            <a href="index.html">Text</a>
+            <a href='images.html'>Images</a>
+            <a href='videos.html'>Videos</a>
+            <a href="table.html">Table</a>
+            <a class="active" href="email.html">Email</a>
+
+        </div>
+        <br>
+        <form name="emailForm"  >
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <br>
+            <input type="submit" value="Submit" onclick="validate()">
+          </form>
+          <p id="res"></p>
+    </body>
+</html>
