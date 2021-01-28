@@ -2,7 +2,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <title>text</title>
+        <title>Images</title>
+        <script type="text/javascript" src="images.js"></script>
+
     </head>
     <body>
         <div class = "topnav">
@@ -10,20 +12,23 @@
             <a class="active" href='images.html'>Images</a>
             <a href='videos.html'>Videos</a>
             <a href="table.html">Table</a>
+            <a href="email.html">Email</a>
+
         </div>
         <br>
         <div  class="grid-container">
-            <div class="grid-item"><img src="assets/sponge.jpg" width="300" height="220"></div>
-            <div class="grid-item"><img src="assets/banned.jpeg" width="330" height="200"></div>
-            <div class="grid-item"><img src="assets/tradition.png" width="300" height="220"></div>
-            <div class="grid-item"><img src="assets/lectures.jpeg" width="300" height="220"></div>
-            <div class="grid-item"><img src="assets/labor.jpeg" width="300" height="220"></div>
-            <div class="grid-item"><img src="assets/fryer.jpeg" width="300" height="220"></div>
+            <div class="grid-item"><img onclick="display('sponge.jpg')" class="grid-image" src="assets/sponge.jpg" ></div>
+            <div class="grid-item"><img onclick="display('banned.jpeg')" class="grid-image" src="assets/banned.jpeg" ></div>
+            <div class="grid-item"><img onclick="display('tradition.png')" class="grid-image" src="assets/tradition.png" ></div>
+            <div class="grid-item"><img onclick="display('lectures.jpeg')" class="grid-image" src="assets/lectures.jpeg" ></div>
+            <div class="grid-item"><img onclick="display('labor.jpeg')" class="grid-image" src="assets/labor.jpeg" ></div>
+            <div class="grid-item"><img onclick="display('fryer.jpeg')" class="grid-image" src="assets/fryer.jpeg"></div>
         </div>
 
-        <div class="modal">
+        <div class="modal" id="myModal">
             <img class="modal-content" id="currentImg">
 
         </div>
+        <button onclick="backToTop()" id="topButton">Back to Top</button>
     </body>
 </html>

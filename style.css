@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -24,13 +28,32 @@
 
 
   .grid-item {
-      padding: 10px;
+      
+      
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding:10px;
+      
+
+    
   }
 
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 10px;
+  }
+
+  .grid-image {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width:90%;
+
+
   }
 /* 
   @media screen and (max-width: 800px) {
@@ -83,9 +106,29 @@ table, th, td {
 }
   
 
-modal-content {
+.modal-content {
   margin: auto;
   display:block;
   width: 80%;
   max-width: 700px;
+}
+
+.modal-content-vid {
+  margin: auto;
+  display:block;
+  width: 80%;
+  
+}
+
+#topButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  background-color: cadetblue;
+  color: white;
+  padding:10px;
+  font-size: 15px;
 }

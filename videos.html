@@ -2,7 +2,36 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <title>text</title>
+        <title>Videos</title>
+        <script>
+
+
+            function display(name) {
+                document.getElementById("myModal").style.display = "flex";
+                var modalVid = document.getElementById("currentVid");
+                modalVid.src = "assets/"+name;
+                modalVid.controls = true;
+                modalVid.autoplay = true;
+
+                modalVid.onlick = function(){
+                    modalVid.paused= true;
+                    modalVid.muted = true;
+                }
+
+                document.getElementById("myModal").onclick = function(){
+                    console.log('close');
+                    modalVid.paused= true;
+                    modalVid.muted = true;
+                    document.getElementById("myModal").style.display = "none";
+                }
+            }
+
+
+            // document.querySelector("#vid1").addEventListener("click",function(event){
+            //     document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+            //     event.preventDefault();
+            // }, false);
+        </script>
     </head>
     <body>
         <div class = "topnav">
@@ -10,13 +39,19 @@
             <a href='images.html'>Images</a>
             <a class="active" href='videos.html'>Videos</a>
             <a href="table.html">Table</a>
+            <a href="email.html">Email</a>
         </div>
         <br>
         <div  class="grid-container">
-            <div class="grid-item"><iframe src="https://www.youtube.com/embed/C_yI2959DYU"></iframe></div>
-            <div class="grid-item"><iframe src="https://www.youtube.com/embed/PV3_UHG73oQ"></iframe></div>
-            <div class="grid-item"><iframe src="https://www.youtube.com/embed/cYXHXj92oeo"></iframe></div>
-            
+            <div class="grid-item"><video width="320" src="assets/ice.MOV" onclick="display('ice.MOV')" ></video></div>
+            <div class="grid-item"><video width="320" src="assets/musicvid.MOV" onclick="display('musicvid.MOV')"></video></div>
+            <div class="grid-item"><video width="320" src="assets/dead.MOV" onclick="display('dead.MOV')"></video></div>
+            <div class="grid-item"><video width="320" src="assets/snow.MOV" onclick="display('snow.MOV')"></video></div>
+            <div class="grid-item"><video width="320" src="assets/fight.MOV" onclick="display('fight.MOV')"></video></div>
+        </div>
+        <div class="modal" id="myModal">
+            <video class="modal-content-vid" id="currentVid">
+
         </div>
     </body>
 </html>
